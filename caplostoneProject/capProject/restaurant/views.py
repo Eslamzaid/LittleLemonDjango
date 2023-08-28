@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from .models import *
 from .serializers import *
 from rest_framework import generics
+from rest_framework import viewsets
 
 # Create your views here.
 
@@ -21,7 +22,9 @@ class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView
     serializer_class = MenuItemSerializer
     
     
-    
+class BookingViewSet(viewsets.ModelViewSet):
+    queryset = Booking.objects.all()    
+    serializer_class = BookingSerializer
     
     
     
