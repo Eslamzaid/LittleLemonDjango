@@ -29,3 +29,4 @@ class MenuViewTest(TestCase):
 
         # Compare the expected data with the response data
         self.assertEqual(expected_data, response_data)
+        self.assertIsInstance
